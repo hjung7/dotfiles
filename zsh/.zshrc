@@ -1,6 +1,3 @@
-export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
-export SUDO_EDITOR=$(which nvim)
-
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
@@ -13,6 +10,11 @@ zstyle :compinstall filename '/home/opc/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
+
+alias podman-update-images='podman images --format "{{.Repository}}:{{.Tag}}" | xargs -n 1 podman pull'
+
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+export SUDO_EDITOR=$(which nvim)
 
 PS1="%{%F{red}%}%n%{%f%}@%{%F{blue}%}%m %{%F{yellow}%}%~ %{$%f%}%% "
 
