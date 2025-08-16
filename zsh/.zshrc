@@ -1,3 +1,6 @@
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+export SUDO_EDITOR=$(which nvim)
+
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
 HISTSIZE=1000
